@@ -1,11 +1,179 @@
 <!DOCTYPE html> 
 <html> 
+ <style>
+* { 
+ margin: 0; 
+ padding: 0; 
+ box-sizing: border-box; 
+} 
+header { 
+ background: #263238; 
+ color: #fff; 
+ padding: 20px 0; 
+} 
+header .container { 
+ display: flex; 
+ justify-content: space-between; 
+ align-items: center; 
+} 
+header nav ul { 
+ list-style: none; 
+ display: flex; 
+ align-items: center; 
+} 
+header nav ul li { 
+ margin-right: 20px; 
+} 
+header nav ul li a { 
+ color: #fff; 
+ text-decoration: none; 
+ font-size: 18px; 
+} 
+header nav ul li a:hover { 
+ text-decoration: underline; 
+} 
+header .logo img { 
+ width: 150px; 
+} 
+#hero { 
+ background: url('images/hero.jpg') no-repeat center center/cover; 
+ height: 500px; 
+ display: flex; 
+ align-items: center; 
+} 
+#hero .container { 
+ text-align: center; 
+} 
+#hero h1 { 
+ font-size: 48px; 
+ margin-bottom: 20px; 
+} 
+#hero p { 
+ font-size: 24px; 
+ margin-bottom: 30px; 
+} 
+#hero button { 
+ background: #fff; 
+ color: #263238; 
+ border: none; 
+ padding: 10px 20px; 
+ font-size: 18px; 
+ border-radius: 5px; 
+ cursor: pointer; 
+} 
+#hero button:hover { 
+ background: #263238; 
+ color: #fff; 
+} 
+/* Стили для секции "О нас" */ 
+#about { 
+ background: #fff; 
+ padding: 50px 0; 
+} 
+#about .container { 
+ text-align: center; 
+} 
+#about h2 { 
+ font-size: 36px; 
+ margin-bottom: 30px; 
+} 
+#about p { 
+ font-size: 18px; 
+ line-height: 1.5; 
+} 
+/* Стили для секции "Наши курсы" */ 
+#courses { 
+ background: #f2f2f2; 
+ padding: 50px 0; 
+} 
+#courses .container { 
+ text-align: center; 
+} 
+#courses h2 { 
+ font-size: 36px; 
+ margin-bottom: 30px; 
+} 
+.course { 
+ background: #fff; 
+ border: 1px solid #ccc; 
+ padding: 20px; 
+ margin-bottom: 20px; 
+ border-radius: 10px; 
+}  
+.course h3 { 
+ font-size: 24px; 
+ margin-bottom: 10px; 
+}  
+.course p { 
+ font-size: 18px; 
+ line-height: 1.5; 
+ margin-bottom: 10px; 
+}  
+.course .price { 
+ font-size: 20px; 
+ font-weight: bold; 
+}  
+/* Стили для секции "Контакты" */ 
+#contact { 
+ background: #263238; 
+ color: #fff; 
+ padding: 50px 0; 
+}  
+#contact .container { 
+ text-align: center; 
+}  
+#contact h2 { 
+ font-size: 36px; 
+ margin-bottom: 30px; 
+}  
+#contact p { 
+ font-size: 18px; 
+ line-height: 1.5; 
+ margin-bottom: 30px; 
+}  
+#contact form label { 
+ font-size: 18px; 
+ display: block; 
+}  
+#contact form input, 
+#contact form textarea { 
+ width: 100%; 
+ padding: 10px; 
+ margin-bottom: 20px; 
+ border-radius: 5px; 
+ border: none; 
+ background: rgba(255,255,255,0.8); 
+ font-size: 18px; 
+}  
+#contact form button { 
+ background: #fff; 
+ color: #263238; 
+ border: none; 
+ padding: 10px 20px; 
+ font-size: 18px; 
+ border-radius: 5px; 
+ cursor: pointer; 
+} 
+#contact form button:hover { 
+ background: #263238; 
+ color: #fff; 
+}  
+/* Стили для подвала */ 
+footer { 
+ background: #263238; 
+ color: #fff; 
+ padding: 20px 0; 
+}  
+footer .container { 
+ text-align: center; 
+}  
+footer p { 
+ font-size: 18px; 
+} 
+</style>
 <head> 
- <title>Курсы английского языка</title> 
- <meta charset="utf-8"> 
- <meta name="viewport" content="width=device-width, initial-scale=1"> 
- <!-- подключение стилей --> 
- <link rel="stylesheet" href="styles.css"> 
+ <title></title> 
+
 </head> 
 <body> 
  <header> 
