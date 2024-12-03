@@ -1,3 +1,5 @@
+// ПРИМЕЧАНИЕ: КОД СЛЕДУЕТ ЗАПУСКАТЬ НА САЙТЕ replit.com
+
 #include <chrono>
 #include <iostream>
 #include <string>
