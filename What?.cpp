@@ -199,7 +199,7 @@ void LEVEV_1(){
         mapGame[box5Y+2][box5X+2] = "🟫";
 
 
-        if((box1X==fPi1X+1)and(box1Y==fPi1Y+1)){
+        if((((box1X) or (box2X) or (box3X) or (box4X) or (box5X))==fPi1X+1) and (((box1Y) or (box2Y) or (box3Y) or (box4Y) or (box5Y))==fPi1Y+1)){
           mapGame[fPi1Y][fPi1X] = "🟩";
           mapGame[fPi1Y][fPi1X+1] = "🟩";
           mapGame[fPi1Y][fPi1X+2] = "🟩";
@@ -222,7 +222,7 @@ void LEVEV_1(){
           countActivateButton--;
         }
         
-        if((box2X==fPi2X+1)and(box2Y==fPi2Y+1)){
+        if((((box1X) or (box2X) or (box3X) or (box4X) or (box5X))==fPi2X+1) and (((box1Y) or (box2Y) or (box3Y) or (box4Y) or (box5Y))==fPi2Y+1)){
           mapGame[fPi2Y][fPi2X] = "🟩";
           mapGame[fPi2Y][fPi2X+1] = "🟩";
           mapGame[fPi2Y][fPi2X+2] = "🟩";
@@ -245,7 +245,7 @@ void LEVEV_1(){
           countActivateButton--;
         }
         
-        if((box3X==fPi3X+1)and(box3Y==fPi3Y+1)){
+        if((((box1X) or (box2X) or (box3X) or (box4X) or (box5X))==fPi3X+1) and (((box1Y) or (box2Y) or (box3Y) or (box4Y) or (box5Y))==fPi3Y+1)){
           mapGame[fPi3Y][fPi3X] = "🟩";
           mapGame[fPi3Y][fPi3X+1] = "🟩";
           mapGame[fPi3Y][fPi3X+2] = "🟩";
@@ -268,7 +268,7 @@ void LEVEV_1(){
           countActivateButton--;
         }
         
-        if((box4X==fPi4X+1)and(box4Y==fPi4Y+1)){
+        if((((box1X) or (box2X) or (box3X) or (box4X) or (box5X))==fPi4X+1) and (((box1Y) or (box2Y) or (box3Y) or (box4Y) or (box5Y))==fPi4Y+1)){
           mapGame[fPi4Y][fPi4X] = "🟩";
           mapGame[fPi4Y][fPi4X+1] = "🟩";
           mapGame[fPi4Y][fPi4X+2] = "🟩";
@@ -291,7 +291,7 @@ void LEVEV_1(){
           countActivateButton--;
         }
         
-        if((box5X==fPi5X+1)and(box5Y==fPi5Y+1)){
+        if((((box1X) or (box2X) or (box3X) or (box4X) or (box5X))==fPi5X+1) and (((box1Y) or (box2Y) or (box3Y) or (box4Y) or (box5Y))==fPi5Y+1)){
           mapGame[fPi5Y][fPi5X] = "🟩";
           mapGame[fPi5Y][fPi5X+1] = "🟩";
           mapGame[fPi5Y][fPi5X+2] = "🟩";
@@ -337,6 +337,151 @@ void LEVEV_1(){
       case 119://key w
         if (uPiY > 0){
           uPiY--;
+          if((box1X>0) or (box2X>0) or (box3X>0) or (box4X>0) or (box5X>0)){
+            if(
+            ((uPiX == box1X) and (uPiY == box1Y+2)) or
+            ((uPiX+1 == box1X) and (uPiY == box1Y+2)) or
+            ((uPiX+2 == box1X) and (uPiY == box1Y+2)) or
+
+            ((uPiX == box1X+1) and (uPiY == box1Y+2)) or
+            ((uPiX+1 == box1X+1) and (uPiY == box1Y+2)) or
+            ((uPiX+2 == box1X+1) and (uPiY == box1Y+2)) or
+
+            ((uPiX == box1X+2)and(uPiY == box1Y+2)) or
+            ((uPiX+1 == box1X+2)and(uPiY == box1Y+2)) or
+            ((uPiX+2 == box1X+2)and(uPiY == box1Y+2)) ){
+            box1Y--;
+            }
+            if(
+            ((uPiX == box2X) and (uPiY == box2Y+2)) or
+            ((uPiX+1 == box2X) and (uPiY == box2Y+2)) or
+            ((uPiX+2 == box2X) and (uPiY == box2Y+2)) or
+
+            ((uPiX == box2X+1) and (uPiY == box2Y+2)) or
+            ((uPiX+1 == box2X+1) and (uPiY == box2Y+2)) or
+            ((uPiX+2 == box2X+1) and (uPiY == box2Y+2)) or
+
+            ((uPiX == box2X+2)and(uPiY == box2Y+2)) or
+            ((uPiX+1 == box2X+2)and(uPiY == box2Y+2)) or
+            ((uPiX+2 == box2X+2)and(uPiY == box2Y+2)) ){
+            box2Y--;
+            }
+            if(
+            ((uPiX == box3X) and (uPiY == box3Y+2)) or
+            ((uPiX+1 == box3X) and (uPiY == box3Y+2)) or
+            ((uPiX+2 == box3X) and (uPiY == box3Y+2)) or
+
+            ((uPiX == box3X+1) and (uPiY == box3Y+2)) or
+            ((uPiX+1 == box3X+1) and (uPiY == box3Y+2)) or
+            ((uPiX+2 == box3X+1) and (uPiY == box3Y+2)) or
+
+            ((uPiX == box3X+2)and(uPiY == box3Y+2)) or
+            ((uPiX+1 == box3X+2)and(uPiY == box3Y+2)) or
+            ((uPiX+2 == box3X+2)and(uPiY == box3Y+2)) ){
+            box3Y--;
+            }
+            if(
+            ((uPiX == box4X) and (uPiY == box4Y+2)) or
+            ((uPiX+1 == box4X) and (uPiY == box4Y+2)) or
+            ((uPiX+2 == box4X) and (uPiY == box4Y+2)) or
+
+            ((uPiX == box4X+1) and (uPiY == box4Y+2)) or
+            ((uPiX+1 == box4X+1) and (uPiY == box4Y+2)) or
+            ((uPiX+2 == box4X+1) and (uPiY == box4Y+2)) or
+
+            ((uPiX == box4X+2)and(uPiY == box4Y+2)) or
+            ((uPiX+1 == box4X+2)and(uPiY == box4Y+2)) or
+            ((uPiX+2 == box4X+2)and(uPiY == box4Y+2)) ){
+            box4Y--;
+            }
+            if(
+            ((uPiX == box5X) and (uPiY == box5Y+2)) or
+            ((uPiX+1 == box5X) and (uPiY == box5Y+2)) or
+            ((uPiX+2 == box5X) and (uPiY == box5Y+2)) or
+
+            ((uPiX == box5X+1) and (uPiY == box5Y+2)) or
+            ((uPiX+1 == box5X+1) and (uPiY == box5Y+2)) or
+            ((uPiX+2 == box5X+1) and (uPiY == box5Y+2)) or
+
+            ((uPiX == box5X+2)and(uPiY == box5Y+2)) or
+            ((uPiX+1 == box5X+2)and(uPiY == box5Y+2)) or
+            ((uPiX+2 == box5X+2)and(uPiY == box5Y+2)) ){
+            box5Y--;
+            }
+          }
+          else{
+            if(
+            ((uPiX == box1X) and (uPiY == box1Y+2)) or
+            ((uPiX+1 == box1X) and (uPiY == box1Y+2)) or
+            ((uPiX+2 == box1X) and (uPiY == box1Y+2)) or
+
+            ((uPiX == box1X+1) and (uPiY == box1Y+2)) or
+            ((uPiX+1 == box1X+1) and (uPiY == box1Y+2)) or
+            ((uPiX+2 == box1X+1) and (uPiY == box1Y+2)) or
+
+            ((uPiX == box1X+2)and(uPiY == box1Y+2)) or
+            ((uPiX+1 == box1X+2)and(uPiY == box1Y+2)) or
+            ((uPiX+2 == box1X+2)and(uPiY == box1Y+2)) ){
+            uPiY++;
+            }
+            if(
+            ((uPiX == box2X) and (uPiY == box2Y+2)) or
+            ((uPiX+1 == box2X) and (uPiY == box2Y+2)) or
+            ((uPiX+2 == box2X) and (uPiY == box2Y+2)) or
+
+            ((uPiX == box2X+1) and (uPiY == box2Y+2)) or
+            ((uPiX+1 == box2X+1) and (uPiY == box2Y+2)) or
+            ((uPiX+2 == box2X+1) and (uPiY == box2Y+2)) or
+
+            ((uPiX == box2X+2)and(uPiY == box2Y+2)) or
+            ((uPiX+1 == box2X+2)and(uPiY == box2Y+2)) or
+            ((uPiX+2 == box2X+2)and(uPiY == box2Y+2)) ){
+            uPiY++;
+            }
+            if(
+            ((uPiX == box3X) and (uPiY == box3Y+2)) or
+            ((uPiX+1 == box3X) and (uPiY == box3Y+2)) or
+            ((uPiX+2 == box3X) and (uPiY == box3Y+2)) or
+
+            ((uPiX == box3X+1) and (uPiY == box3Y+2)) or
+            ((uPiX+1 == box3X+1) and (uPiY == box3Y+2)) or
+            ((uPiX+2 == box3X+1) and (uPiY == box3Y+2)) or
+
+            ((uPiX == box3X+2)and(uPiY == box3Y+2)) or
+            ((uPiX+1 == box3X+2)and(uPiY == box3Y+2)) or
+            ((uPiX+2 == box3X+2)and(uPiY == box3Y+2)) ){
+            uPiY++;
+            }
+            if(
+            ((uPiX == box4X) and (uPiY == box4Y+2)) or
+            ((uPiX+1 == box4X) and (uPiY == box4Y+2)) or
+            ((uPiX+2 == box4X) and (uPiY == box4Y+2)) or
+
+            ((uPiX == box4X+1) and (uPiY == box4Y+2)) or
+            ((uPiX+1 == box4X+1) and (uPiY == box4Y+2)) or
+            ((uPiX+2 == box4X+1) and (uPiY == box4Y+2)) or
+
+            ((uPiX == box4X+2)and(uPiY == box4Y+2)) or
+            ((uPiX+1 == box4X+2)and(uPiY == box4Y+2)) or
+            ((uPiX+2 == box4X+2)and(uPiY == box4Y+2)) ){
+            uPiY++;
+            }
+            if(
+            ((uPiX == box5X) and (uPiY == box5Y+2)) or
+            ((uPiX+1 == box5X) and (uPiY == box5Y+2)) or
+            ((uPiX+2 == box5X) and (uPiY == box5Y+2)) or
+
+            ((uPiX == box5X+1) and (uPiY == box5Y+2)) or
+            ((uPiX+1 == box5X+1) and (uPiY == box5Y+2)) or
+            ((uPiX+2 == box5X+1) and (uPiY == box5Y+2)) or
+
+            ((uPiX == box5X+2)and(uPiY == box5Y+2)) or
+            ((uPiX+1 == box5X+2)and(uPiY == box5Y+2)) or
+            ((uPiX+2 == box5X+2)and(uPiY == box5Y+2)) ){
+            uPiY++;
+            }
+          }
+          
           
         }
         cout << "\x1B[2J\x1B[H";
@@ -345,7 +490,150 @@ void LEVEV_1(){
       case 115://key s
         if (uPiY < SQR-3) {
           uPiY++;
+          if((box1X<SQR-3) or (box2X<SQR-3) or (box3X<SQR-3) or (box4X<SQR-3) or (box5X<SQR-3)){
+            if(
+            ((uPiX == box1X) and (uPiY+2 == box1Y)) or
+            ((uPiX+1 == box1X) and (uPiY+2 == box1Y)) or
+            ((uPiX+2 == box1X) and (uPiY+2 == box1Y)) or
 
+            ((uPiX == box1X+1) and (uPiY+2 == box1Y)) or
+            ((uPiX+1 == box1X+1) and (uPiY+2 == box1Y)) or
+            ((uPiX+2 == box1X+1) and (uPiY+2 == box1Y)) or
+
+            ((uPiX == box1X+2)and(uPiY+2 == box1Y)) or
+            ((uPiX+1 == box1X+2)and(uPiY+2 == box1Y)) or
+            ((uPiX+2 == box1X+2)and(uPiY+2 == box1Y)) ){
+            box1Y++;
+            }
+            if(
+            ((uPiX == box2X) and (uPiY+2 == box2Y)) or
+            ((uPiX+1 == box2X) and (uPiY+2 == box2Y)) or
+            ((uPiX+2 == box2X) and (uPiY+2 == box2Y)) or
+
+            ((uPiX == box2X+1) and (uPiY+2 == box2Y)) or
+            ((uPiX+1 == box2X+1) and (uPiY+2 == box2Y)) or
+            ((uPiX+2 == box2X+1) and (uPiY+2 == box2Y)) or
+
+            ((uPiX == box2X+2)and(uPiY+2 == box2Y)) or
+            ((uPiX+1 == box2X+2)and(uPiY+2 == box2Y)) or
+            ((uPiX+2 == box2X+2)and(uPiY+2 == box2Y)) ){
+            box2Y++;
+            }
+            if(
+            ((uPiX == box3X) and (uPiY+2 == box3Y)) or
+            ((uPiX+1 == box3X) and (uPiY+2 == box3Y)) or
+            ((uPiX+2 == box3X) and (uPiY+2 == box3Y)) or
+
+            ((uPiX == box3X+1) and (uPiY+2 == box3Y)) or
+            ((uPiX+1 == box3X+1) and (uPiY+2 == box3Y)) or
+            ((uPiX+2 == box3X+1) and (uPiY+2 == box3Y)) or
+
+            ((uPiX == box3X+2)and(uPiY+2 == box3Y)) or
+            ((uPiX+1 == box3X+2)and(uPiY+2 == box3Y)) or
+            ((uPiX+2 == box3X+2)and(uPiY+2 == box3Y)) ){
+            box3Y++;
+            }
+            if(
+            ((uPiX == box4X) and (uPiY+2 == box4Y)) or
+            ((uPiX+1 == box4X) and (uPiY+2 == box4Y)) or
+            ((uPiX+2 == box4X) and (uPiY+2 == box4Y)) or
+
+            ((uPiX == box4X+1) and (uPiY+2 == box4Y)) or
+            ((uPiX+1 == box4X+1) and (uPiY+2 == box4Y)) or
+            ((uPiX+2 == box4X+1) and (uPiY+2 == box4Y)) or
+
+            ((uPiX == box4X+2)and(uPiY+2 == box4Y)) or
+            ((uPiX+1 == box4X+2)and(uPiY+2 == box4Y)) or
+            ((uPiX+2 == box4X+2)and(uPiY+2 == box4Y)) ){
+            box4Y++;
+            }
+            if(
+            ((uPiX == box5X) and (uPiY+2 == box5Y)) or
+            ((uPiX+1 == box5X) and (uPiY+2 == box5Y)) or
+            ((uPiX+2 == box5X) and (uPiY+2 == box5Y)) or
+
+            ((uPiX == box5X+1) and (uPiY+2 == box5Y)) or
+            ((uPiX+1 == box5X+1) and (uPiY+2 == box5Y)) or
+            ((uPiX+2 == box5X+1) and (uPiY+2 == box5Y)) or
+
+            ((uPiX == box5X+2)and(uPiY+2 == box5Y)) or
+            ((uPiX+1 == box5X+2)and(uPiY+2 == box5Y)) or
+            ((uPiX+2 == box5X+2)and(uPiY+2 == box5Y)) ){
+            box5Y++;
+            }
+          }
+          else{
+            if(
+            ((uPiX == box1X) and (uPiY+2 == box1Y)) or
+            ((uPiX+1 == box1X) and (uPiY+2 == box1Y)) or
+            ((uPiX+2 == box1X) and (uPiY+2 == box1Y)) or
+
+            ((uPiX == box1X+1) and (uPiY+2 == box1Y)) or
+            ((uPiX+1 == box1X+1) and (uPiY+2 == box1Y)) or
+            ((uPiX+2 == box1X+1) and (uPiY+2 == box1Y)) or
+
+            ((uPiX == box1X+2)and(uPiY+2 == box1Y)) or
+            ((uPiX+1 == box1X+2)and(uPiY+2 == box1Y)) or
+            ((uPiX+2 == box1X+2)and(uPiY+2 == box1Y)) ){
+            uPiY--;
+            }
+            if(
+            ((uPiX == box2X) and (uPiY+2 == box2Y)) or
+            ((uPiX+1 == box2X) and (uPiY+2 == box2Y)) or
+            ((uPiX+2 == box2X) and (uPiY+2 == box2Y)) or
+
+            ((uPiX == box2X+1) and (uPiY+2 == box2Y)) or
+            ((uPiX+1 == box2X+1) and (uPiY+2 == box2Y)) or
+            ((uPiX+2 == box2X+1) and (uPiY+2 == box2Y)) or
+
+            ((uPiX == box2X+2)and(uPiY+2 == box2Y)) or
+            ((uPiX+1 == box2X+2)and(uPiY+2 == box2Y)) or
+            ((uPiX+2 == box2X+2)and(uPiY+2 == box2Y)) ){
+            uPiY--;
+            }
+            if(
+            ((uPiX == box3X) and (uPiY+2 == box3Y)) or
+            ((uPiX+1 == box3X) and (uPiY+2 == box3Y)) or
+            ((uPiX+2 == box3X) and (uPiY+2 == box3Y)) or
+
+            ((uPiX == box3X+1) and (uPiY+2 == box3Y)) or
+            ((uPiX+1 == box3X+1) and (uPiY+2 == box3Y)) or
+            ((uPiX+2 == box3X+1) and (uPiY+2 == box3Y)) or
+
+            ((uPiX == box3X+2)and(uPiY+2 == box3Y)) or
+            ((uPiX+1 == box3X+2)and(uPiY+2 == box3Y)) or
+            ((uPiX+2 == box3X+2)and(uPiY+2 == box3Y)) ){
+            uPiY--;
+            }
+            if(
+            ((uPiX == box4X) and (uPiY+2 == box4Y)) or
+            ((uPiX+1 == box4X) and (uPiY+2 == box4Y)) or
+            ((uPiX+2 == box4X) and (uPiY+2 == box4Y)) or
+
+            ((uPiX == box4X+1) and (uPiY+2 == box4Y)) or
+            ((uPiX+1 == box4X+1) and (uPiY+2 == box4Y)) or
+            ((uPiX+2 == box4X+1) and (uPiY+2 == box4Y)) or
+
+            ((uPiX == box4X+2)and(uPiY+2 == box4Y)) or
+            ((uPiX+1 == box4X+2)and(uPiY+2 == box4Y)) or
+            ((uPiX+2 == box4X+2)and(uPiY+2 == box4Y)) ){
+            uPiY--;
+            }
+            if(
+            ((uPiX == box5X) and (uPiY+2 == box5Y)) or
+            ((uPiX+1 == box5X) and (uPiY+2 == box5Y)) or
+            ((uPiX+2 == box5X) and (uPiY+2 == box5Y)) or
+
+            ((uPiX == box5X+1) and (uPiY+2 == box5Y)) or
+            ((uPiX+1 == box5X+1) and (uPiY+2 == box5Y)) or
+            ((uPiX+2 == box5X+1) and (uPiY+2 == box5Y)) or
+
+            ((uPiX == box5X+2)and(uPiY+2 == box5Y)) or
+            ((uPiX+1 == box5X+2)and(uPiY+2 == box5Y)) or
+            ((uPiX+2 == box5X+2)and(uPiY+2 == box5Y)) ){
+            uPiY--;
+            }
+          }
         }
         cout << "\x1B[2J\x1B[H";
         break;
