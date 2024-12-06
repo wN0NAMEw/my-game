@@ -124,21 +124,27 @@ void LEVEV_1(){
   int uPiX = 1;
   int uPiY = 1;
 
-  int fPi1X = 1;int fPi2X =9;int fPi3X =17;int fPi4X =26;int fPi5X =35;
+  int fPi1X = 1;int fPi2X =9;int fPi3X =17;int fPi4X =25;int fPi5X =33;
   int fPi1Y = 31;int fPi2Y = 31;int fPi3Y = 31;int fPi4Y = 31;int fPi5Y = 31;
 
   int box1Y = 27;int box2Y = 27;int box3Y = 27;int box4Y = 27;int box5Y = 27;
   int box1X = 2;int box2X = 10;int box3X = 18;int box4X = 26;int box5X = 34;
 
-  int countActivateButton = 0;
-  
+  bool satBut1,satBut2,satBut3,satBut4,satBut5 = false;
   string mapGame[SQR][SQR];
-  while (true) {
+  bool temprun = true;
+  while (temprun) {
     for (int i = 0; i < SQR; i++) {
       for (int j = 0; j < SQR; j++) {
         mapGame[i][j] = level_1[i][j];
+        
 
-        if(( (box1X or box2X or box3X or box4X or box5X) == fPi1X+1) and ((box1Y or box2Y or box3Y or box4Y or box5Y)== fPi1Y+1)){
+        
+        if( ((box1X == fPi1X+1) and (box1Y == fPi1Y+1)) or
+           (box2X == fPi1X+1) and (box2Y == fPi1Y+1) or
+           (box3X == fPi1X+1) and (box3Y == fPi1Y+1) or
+           (box4X == fPi1X+1) and (box4Y == fPi1Y+1) or
+           (box5X == fPi1X+1) and (box5Y == fPi1Y+1) ){
           mapGame[fPi1Y][fPi1X] = "🟩";
           mapGame[fPi1Y][fPi1X+1] = "🟩";
           mapGame[fPi1Y][fPi1X+2] = "🟩";
@@ -155,104 +161,120 @@ void LEVEV_1(){
           mapGame[fPi1Y+4][fPi1X+2] = "🟩";
           mapGame[fPi1Y+4][fPi1X+3] = "🟩";
           mapGame[fPi1Y+4][fPi1X+4] = "🟩";
-          countActivateButton++;
+          satBut1 = true;
         }
         else{
-          countActivateButton--;
+          satBut1 = false;
         }
 
-        if(( (box1X or box2X or box3X or box4X or box5X) == fPi2X+1) and ((box1Y or box2Y or box3Y or box4Y or box5Y) == fPi2Y+1)){
-          mapGame[fPi2Y][fPi2X] = "🟩";
-          mapGame[fPi2Y][fPi2X+1] = "🟩";
-          mapGame[fPi2Y][fPi2X+2] = "🟩";
-          mapGame[fPi2Y][fPi2X+3] = "🟩";
-          mapGame[fPi2Y][fPi2X+4] = "🟩";
-          mapGame[fPi2Y+1][fPi2X] = "🟩";
-          mapGame[fPi2Y+1][fPi2X+4] = "🟩";
-          mapGame[fPi2Y+2][fPi2X] = "🟩";
-          mapGame[fPi2Y+2][fPi2X+4] = "🟩";
-          mapGame[fPi2Y+3][fPi2X] = "🟩";
-          mapGame[fPi2Y+3][fPi2X+4] = "🟩";
-          mapGame[fPi2Y+4][fPi2X] = "🟩";
-          mapGame[fPi2Y+4][fPi2X+1] = "🟩";
-          mapGame[fPi2Y+4][fPi2X+2] = "🟩";
-          mapGame[fPi2Y+4][fPi2X+3] = "🟩";
-          mapGame[fPi2Y+4][fPi2X+4] = "🟩";
-          countActivateButton++;
+        if(((box1X == fPi2X+1) and (box1Y == fPi2Y+1)) or
+         (box2X == fPi2X+1) and (box2Y == fPi2Y+1) or
+         (box3X == fPi2X+1) and (box3Y == fPi2Y+1) or
+         (box4X == fPi2X+1) and (box4Y == fPi2Y+1) or
+         (box5X == fPi2X+1) and (box5Y == fPi2Y+1) ){
+        mapGame[fPi2Y][fPi2X] = "🟩";
+        mapGame[fPi2Y][fPi2X+1] = "🟩";
+        mapGame[fPi2Y][fPi2X+2] = "🟩";
+        mapGame[fPi2Y][fPi2X+3] = "🟩";
+        mapGame[fPi2Y][fPi2X+4] = "🟩";
+        mapGame[fPi2Y+1][fPi2X] = "🟩";
+        mapGame[fPi2Y+1][fPi2X+4] = "🟩";
+        mapGame[fPi2Y+2][fPi2X] = "🟩";
+        mapGame[fPi2Y+2][fPi2X+4] = "🟩";
+        mapGame[fPi2Y+3][fPi2X] = "🟩";
+        mapGame[fPi2Y+3][fPi2X+4] = "🟩";
+        mapGame[fPi2Y+4][fPi2X] = "🟩";
+        mapGame[fPi2Y+4][fPi2X+1] = "🟩";
+        mapGame[fPi2Y+4][fPi2X+2] = "🟩";
+        mapGame[fPi2Y+4][fPi2X+3] = "🟩";
+        mapGame[fPi2Y+4][fPi2X+4] = "🟩";
+            satBut2 = true;
+          }
+        else{
+            satBut2 = false;
+          }
+
+        if(((box1X == fPi3X+1) and (box1Y == fPi3Y+1)) or
+         (box2X == fPi3X+1) and (box2Y == fPi3Y+1) or
+         (box3X == fPi3X+1) and (box3Y == fPi3Y+1) or
+         (box4X == fPi3X+1) and (box4Y == fPi3Y+1) or
+         (box5X == fPi3X+1) and (box5Y == fPi3Y+1) ){
+        mapGame[fPi3Y][fPi3X] = "🟩";
+        mapGame[fPi3Y][fPi3X+1] = "🟩";
+        mapGame[fPi3Y][fPi3X+2] = "🟩";
+        mapGame[fPi3Y][fPi3X+3] = "🟩";
+        mapGame[fPi3Y][fPi3X+4] = "🟩";
+        mapGame[fPi3Y+1][fPi3X] = "🟩";
+        mapGame[fPi3Y+1][fPi3X+4] = "🟩";
+        mapGame[fPi3Y+2][fPi3X] = "🟩";
+        mapGame[fPi3Y+2][fPi3X+4] = "🟩";
+        mapGame[fPi3Y+3][fPi3X] = "🟩";
+        mapGame[fPi3Y+3][fPi3X+4] = "🟩";
+        mapGame[fPi3Y+4][fPi3X] = "🟩";
+        mapGame[fPi3Y+4][fPi3X+1] = "🟩";
+        mapGame[fPi3Y+4][fPi3X+2] = "🟩";
+        mapGame[fPi3Y+4][fPi3X+3] = "🟩";
+        mapGame[fPi3Y+4][fPi3X+4] = "🟩";
+          satBut3 = true;
         }
         else{
-          countActivateButton--;
+          satBut3 = false;
         }
 
-        if(( (box1X or box2X or box3X or box4X or box5X) == fPi3X+1) and ((box1Y or box2Y or box3Y or box4Y or box5Y) == fPi3Y+1)){
-          mapGame[fPi3Y][fPi3X] = "🟩";
-          mapGame[fPi3Y][fPi3X+1] = "🟩";
-          mapGame[fPi3Y][fPi3X+2] = "🟩";
-          mapGame[fPi3Y][fPi3X+3] = "🟩";
-          mapGame[fPi3Y][fPi3X+4] = "🟩";
-          mapGame[fPi3Y+1][fPi3X] = "🟩";
-          mapGame[fPi3Y+1][fPi3X+4] = "🟩";
-          mapGame[fPi3Y+2][fPi3X] = "🟩";
-          mapGame[fPi3Y+2][fPi3X+4] = "🟩";
-          mapGame[fPi3Y+3][fPi3X] = "🟩";
-          mapGame[fPi3Y+3][fPi3X+4] = "🟩";
-          mapGame[fPi3Y+4][fPi3X] = "🟩";
-          mapGame[fPi3Y+4][fPi3X+1] = "🟩";
-          mapGame[fPi3Y+4][fPi3X+2] = "🟩";
-          mapGame[fPi3Y+4][fPi3X+3] = "🟩";
-          mapGame[fPi3Y+4][fPi3X+4] = "🟩";
-          countActivateButton++;
+        if(((box1X == fPi4X+1) and (box1Y == fPi4Y+1)) or
+         (box2X == fPi4X+1) and (box2Y == fPi4Y+1) or
+         (box3X == fPi4X+1) and (box3Y == fPi4Y+1) or
+         (box4X == fPi4X+1) and (box4Y == fPi4Y+1) or
+         (box5X == fPi4X+1) and (box5Y == fPi4Y+1) ){
+        mapGame[fPi4Y][fPi4X] = "🟩";
+        mapGame[fPi4Y][fPi4X+1] = "🟩";
+        mapGame[fPi4Y][fPi4X+2] = "🟩";
+        mapGame[fPi4Y][fPi4X+3] = "🟩";
+        mapGame[fPi4Y][fPi4X+4] = "🟩";
+        mapGame[fPi4Y+1][fPi4X] = "🟩";
+        mapGame[fPi4Y+1][fPi4X+4] = "🟩";
+        mapGame[fPi4Y+2][fPi4X] = "🟩";
+        mapGame[fPi4Y+2][fPi4X+4] = "🟩";
+        mapGame[fPi4Y+3][fPi4X] = "🟩";
+        mapGame[fPi4Y+3][fPi4X+4] = "🟩";
+        mapGame[fPi4Y+4][fPi4X] = "🟩";
+        mapGame[fPi4Y+4][fPi4X+1] = "🟩";
+        mapGame[fPi4Y+4][fPi4X+2] = "🟩";
+        mapGame[fPi4Y+4][fPi4X+3] = "🟩";
+        mapGame[fPi4Y+4][fPi4X+4] = "🟩";
+          satBut4 = true;
         }
         else{
-          countActivateButton--;
+          satBut4 = false;
         }
 
-        if(( (box1X or box2X or box3X or box4X or box5X) == fPi4X+1) and ((box1Y or box2Y or box3Y or box4Y or box5Y) == fPi4Y+1)){
-          mapGame[fPi4Y][fPi4X] = "🟩";
-          mapGame[fPi4Y][fPi4X+1] = "🟩";
-          mapGame[fPi4Y][fPi4X+2] = "🟩";
-          mapGame[fPi4Y][fPi4X+3] = "🟩";
-          mapGame[fPi4Y][fPi4X+4] = "🟩";
-          mapGame[fPi4Y+1][fPi4X] = "🟩";
-          mapGame[fPi4Y+1][fPi4X+4] = "🟩";
-          mapGame[fPi4Y+2][fPi4X] = "🟩";
-          mapGame[fPi4Y+2][fPi4X+4] = "🟩";
-          mapGame[fPi4Y+3][fPi4X] = "🟩";
-          mapGame[fPi4Y+3][fPi4X+4] = "🟩";
-          mapGame[fPi4Y+4][fPi4X] = "🟩";
-          mapGame[fPi4Y+4][fPi4X+1] = "🟩";
-          mapGame[fPi4Y+4][fPi4X+2] = "🟩";
-          mapGame[fPi4Y+4][fPi4X+3] = "🟩";
-          mapGame[fPi4Y+4][fPi4X+4] = "🟩";
-          countActivateButton++;
-        }
+        if(((box1X == fPi5X+1) and (box1Y == fPi5Y+1)) or
+         (box2X == fPi5X+1) and (box2Y == fPi5Y+1) or
+         (box3X == fPi5X+1) and (box3Y == fPi5Y+1) or
+         (box4X == fPi5X+1) and (box4Y == fPi5Y+1) or
+         (box5X == fPi5X+1) and (box5Y == fPi5Y+1) ){
+        mapGame[fPi5Y][fPi5X] = "🟩";
+        mapGame[fPi5Y][fPi5X+1] = "🟩";
+        mapGame[fPi5Y][fPi5X+2] = "🟩";
+        mapGame[fPi5Y][fPi5X+3] = "🟩";
+        mapGame[fPi5Y][fPi5X+4] = "🟩";
+        mapGame[fPi5Y+1][fPi5X] = "🟩";
+        mapGame[fPi5Y+1][fPi5X+4] = "🟩";
+        mapGame[fPi5Y+2][fPi5X] = "🟩";
+        mapGame[fPi5Y+2][fPi5X+4] = "🟩";
+        mapGame[fPi5Y+3][fPi5X] = "🟩";
+        mapGame[fPi5Y+3][fPi5X+4] = "🟩";
+        mapGame[fPi5Y+4][fPi5X] = "🟩";
+        mapGame[fPi5Y+4][fPi5X+1] = "🟩";
+        mapGame[fPi5Y+4][fPi5X+2] = "🟩";
+        mapGame[fPi5Y+4][fPi5X+3] = "🟩";
+        mapGame[fPi5Y+4][fPi5X+4] = "🟩";
+            satBut5 = true;
+          }
         else{
-          countActivateButton--;
-        }
+            satBut5 = false;
+          }
 
-        if(( (box1X or box2X or box3X or box4X or box5X) == fPi5X+1) and ((box1Y or box2Y or box3Y or box4Y or box5Y) == fPi5Y+1)){
-          mapGame[fPi5Y][fPi5X] = "🟩";
-          mapGame[fPi5Y][fPi5X+1] = "🟩";
-          mapGame[fPi5Y][fPi5X+2] = "🟩";
-          mapGame[fPi5Y][fPi5X+3] = "🟩";
-          mapGame[fPi5Y][fPi5X+4] = "🟩";
-          mapGame[fPi5Y+1][fPi5X] = "🟩";
-          mapGame[fPi5Y+1][fPi5X+4] = "🟩";
-          mapGame[fPi5Y+2][fPi5X] = "🟩";
-          mapGame[fPi5Y+2][fPi5X+4] = "🟩";
-          mapGame[fPi5Y+3][fPi5X] = "🟩";
-          mapGame[fPi5Y+3][fPi5X+4] = "🟩";
-          mapGame[fPi5Y+4][fPi5X] = "🟩";
-          mapGame[fPi5Y+4][fPi5X+1] = "🟩";
-          mapGame[fPi5Y+4][fPi5X+2] = "🟩";
-          mapGame[fPi5Y+4][fPi5X+3] = "🟩";
-          mapGame[fPi5Y+4][fPi5X+4] = "🟩";
-          countActivateButton++;
-        }
-        else{
-          countActivateButton--;
-        }
-        
         mapGame[uPiY][uPiX] = "⬛️";
         mapGame[uPiY][uPiX+1] = "⬛️";
         mapGame[uPiY][uPiX+2] = "⬛️";
@@ -262,7 +284,7 @@ void LEVEV_1(){
         mapGame[uPiY+2][uPiX] = "⬛️";
         mapGame[uPiY+2][uPiX+1] = "⬛️";
         mapGame[uPiY+2][uPiX+2] = "⬛️";
-        
+
         mapGame[box1Y][box1X] = "🟫";
         mapGame[box1Y][box1X+1] = "🟫";
         mapGame[box1Y][box1X+2] = "🟫";
@@ -302,7 +324,7 @@ void LEVEV_1(){
         mapGame[box4Y+2][box4X] = "🟫";
         mapGame[box4Y+2][box4X+1] = "🟫";
         mapGame[box4Y+2][box4X+2] = "🟫";
-        
+
         mapGame[box5Y][box5X] = "🟫";
         mapGame[box5Y][box5X+1] = "🟫";
         mapGame[box5Y][box5X+2] = "🟫";
@@ -313,16 +335,14 @@ void LEVEV_1(){
         mapGame[box5Y+2][box5X+1] = "🟫";
         mapGame[box5Y+2][box5X+2] = "🟫";
 
+        cout<< mapGame[i][j];
 
-
-
-        if(countActivateButton==5){
+        if(satBut1 and satBut2 and satBut3 and satBut4 and satBut5 == true){
           std::this_thread::sleep_for(stop);
+          temprun = false;
           def_win_user();
           break;
         }
-        
-        cout<< mapGame[i][j];
       }
       cout << endl;
     }
@@ -483,8 +503,6 @@ void LEVEV_1(){
             uPiY++;
             }
           }
-          
-          
         }
         cout << "\x1B[2J\x1B[H";
         break;
@@ -661,7 +679,6 @@ void LEVEV_1(){
     }
   }
 }
-
 
 
 int main() {
