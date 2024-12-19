@@ -10,7 +10,6 @@
 using namespace std;
 // vector<int> ttm;
 // cout << "\x1B[2J\x1B[H";
-int SQR = 10;
 
 int getch() {
  struct termios oldt, newt;
@@ -24,12 +23,6 @@ int getch() {
  return ch;
 }
 
-struct levels{
-  int idName = 1;
-  string mapBase[10][10];
-};
-
-// can work
 // ⬛️
 // ⬜️
 // 🟥
@@ -117,7 +110,7 @@ void defBetaGame(){
   }
   int optX = 1;
   int optY = 1;
-  string mapGame[SQR][SQR];
+  string mapGame[10][10];
   while (true) {
     cout<<"Для прохождения вам необходимо закрасить все коричневые квадраты"<<endl;
     cout<<"Опасайтесь красной территории"<<endl;
@@ -125,8 +118,8 @@ void defBetaGame(){
     cout<<"   W      закрасить:   "<<endl;
     cout<<" A S D      SPASE"<<endl;
     int countGreen = 0;
-    for (int i = 0; i < SQR; i++) {
-      for (int j = 0; j < SQR; j++) {
+    for (int i = 0; i < 10; i++) {
+      for (int j = 0; j < 10; j++) {
         mapGame[i][j] = mgbLVL1[i][j];
         if(mgbLVL1[i][j] == "🟩"){
           countGreen++;
