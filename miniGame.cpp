@@ -146,7 +146,6 @@ void defBetaGame(){
     }
 
     int key = getch();
-    cout<<key;
     switch (key){
     case 32:
       if(mgbLVL1[optY][optX] == "🟫"){
